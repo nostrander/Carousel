@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset= "utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carousel Example</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/myStyles.css">
+</head>
+
+<body id="index">
+
+    <div class="container">
+        <div class="row row-content">
+            <div class="col-xl-12">
+                <div id="mycarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#mycarousel" data-slide-to="1"></li>
+                        <li data-target="#mycarousel" data-slide-to="2"></li>
+                        <li data-target="#mycarousel" data-slide-to="3" class="active"></li>
+                        <li data-target="#mycarousel" data-slide-to="4"></li>
+                        <li data-target="#mycarousel" data-slide-to="5"></li>
+                        <li data-target="#mycarousel" data-slide-to="6"></li>
+
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img class="img-responsive" src="img/dracolich.jpg" alt="Dracolich">
+                            <div class="carousel-caption" >
+                                <h2>Dracolich</h2>
+                                <p>often misconceived as signs of death or evil, these dragons are completion in all of its forms.  They are predominantly deep space dragons.  They are the largest of the Dragons commonly known.  They will aid you on any closures and ending you must do.  The appearance of one often means that you need to end something that is not in your best interest.  </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="img/Blue.png" alt="Blue Dragon">
+                            <div class="carousel-caption">
+                                <h2> Blue Dragon</h2>
+                                <p>Blue is a common color for sea serpents. Light blue dragons represent the vastness of the sky and flight, while dark blue dragons represent still, deep waters. Blue dragons are highly protective creatures and magical. Blue Chinese dragons are of the purest azure colors. They are a symbol of the East and are pacifying.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="img/Golden.jpg" alt="Golden Dragon">
+                            <div class="carousel-caption">
+                                <h2 >Golden Dragon</h2>
+                                <p>a larger species of Dragon, golds seem to be jaded a bit.  Often they can aid you in areas of knowledge and money.  Gold Dragons tend to show up when you need to be more careful or more protective over something.  Or at times when you are seeking hidden knowledge.  They tend to require gifts of money or shining objects.  They originate from mines or forgotten places.</p>
+                                                      </div>
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="img/green.png" alt="Green Dragon">
+                            <div class="carousel-caption">
+                                <h2> Green Dragon</h2>
+                                <p>these tend to be earth elemental based dragons.  Often dwelling in forests they can aid you when you feel the need to grow or to return to your primal self.  These dragons are often pleased with gifts of flowers, plants, or pure soil from a forest.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="img/purple.jpg" alt="Purple Dragon">
+                            <div class="carousel-caption">
+                                <h2>Purple Dragon</h2>
+                                <p>symbolize wealth and royalty. On the other hand, a purple dragons symbolize mourning and grief. Since Taoism sees violet as the marker of the transition between active (Yang) and passive (Yin) aspects, a violet dragon symbolizes a transitional or liminal creature. In modern artwork and cartooning, many cute or whimsical dragons are purple.</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img class="img-responsive" src="img/rainbow.jpg" alt="Rainbow Dragon">
+                            <div class="carousel-caption">
+                                <h2>Rainbow Dragon</h2>
+                                <p>A rainbow-colored dragon is quite uncommon. The exception is the Rainbow Serpent, or Rainbow Snake, found in traditions across the world. The Rainbow Serpent devours people and vomits them back up, symbolizing death and rebirth. Some dragons are associated with the rainbow in other ways. For example, the Aztecs said that the dragon god Quetzalcoatl could be seen flying across the sky in the form of a rainbow. Rainbow dragons are inherently connected to the weather, specifically the rain, since the natural manifestation of the rainbow is after a rainstorm.</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img class="img-responsive" src="img/red.jpg" alt="Red Dragon">
+                            <div class="carousel-caption">
+                                <h2>Red Dragon</h2>
+                                <p>the lords of the Mountains and element of Fire.  Reds are swift on the wind and often seen for glimpses flying over mountains.  Red dragons excel at healing, both physically and emotionally.</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <a href="#mycarousel" class="left carousel-control" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a href="#mycarousel" class="right carousel-control" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    <div class="btn-group" id="carouselButtons">   
+                        <button class="btn btn-danger btn-xs" id="carousel-pause">
+                            <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
+                        </button>
+                        <button class="btn btn-danger btn-xs" id="carousel-play">
+                            <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>  
+            </div>
+        </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>  
+    <script>
+        $(document).ready(function(){
+            $('.carousel').carousel({
+            interval: 3000
+            });
+            $("#carousel-pause").click(function(){
+                $("#mycarousel").carousel('pause');
+            });
+            $("#carousel-play").click(function(){
+                $("#mycarousel").carousel('cycle');
+            });
+
+            $("#loginclick").click(function(){
+                $("#loginModal").modal('show');
+            });
+            $("#loginclose").click(function(){
+                $("#loginModal").modal('hide');
+            });
+            $("#logincancel").click(function(){
+                $("#loginModal").modal('hide');
+            });
+
+            $("#tableres").click(function(){
+                $("#resvModal").modal('show');
+            });
+            $("#closeresv").click(function(){
+                $("#resvModal").modal('hide');
+            });
+            $("#cancelresv").click(function(){
+                $("#resvModal").modal('hide');
+            });
+        });
+    </script>
+</body>
+
+</html>
